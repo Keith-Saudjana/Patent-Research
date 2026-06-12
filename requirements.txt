@@ -1,0 +1,12 @@
+huggingface-hub
+pillow
+matplotlib
+pandas
+# torch
+# torchvision
+# torchaudio
+# open-clip-torch
+# keybert
+# sam2
+# mistralai
+spacy

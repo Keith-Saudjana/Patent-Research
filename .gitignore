@@ -1,0 +1,13 @@
+class_folder
+impact_dataset
+LLaVA-NeXT
+model_io
+model_weights
+*.pth
+*.pt
+*.log
+*.csv
+Impact_clean.csv
+data/
+__pycache__/
+.ipynb_checkpoints/
