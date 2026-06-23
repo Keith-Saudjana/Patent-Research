@@ -11,3 +11,5 @@ Impact_clean.csv
 data/
 __pycache__/
 .ipynb_checkpoints/
+dino_images
+florence_images
