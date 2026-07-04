@@ -1,8 +1,12 @@
 class_folder
+figure_crops
 impact_dataset
 LLaVA-NeXT
 model_io
 model_weights
+debug
+groundingLMM
+fonts
 *.pth
 *.pt
 *.log
@@ -11,5 +15,3 @@ Impact_clean.csv
 data/
 __pycache__/
 .ipynb_checkpoints/
-dino_images
-florence_images
