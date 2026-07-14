@@ -42,8 +42,8 @@ from tqdm import tqdm
 # Config
 # ---------------------------------------------------------------------------
 
-CSV_IN      = "/home/yishin/keith/patent_research/model_io/Impact_Sub.csv"
-CSV_OUT     = "/home/yishin/keith/patent_research/model_io/Impact_Sub_Crops.csv"
+CSV_IN      = "/home/yishin/keith/patent_research/model_io/1_Impact_Sub.csv"
+CSV_OUT     = "/home/yishin/keith/patent_research/model_io/2_Impact_Sub_Crops.csv"
 OUTPUT_ROOT = "figure_crops"
 WORKERS     = 4          # parallel rows processed simultaneously; tune to CPU count
 
@@ -362,7 +362,16 @@ def assign_crops_to_figs(
                 print(f"    [SKIP] missing: {path}")
             continue
 
-        raw = cv2.imread(path)
+        def read_image_bgr(path):
+            try:
+                pil = Image.open(path).convert("RGB")
+                rgb = np.array(pil)
+                return cv2.cvtColor(rgb, cv2.COLOR_RGB2BGR)
+            except Exception:
+                return cv2.imread(path)
+
+        raw = read_image_bgr(path)
+
         if raw is None:
             if verbose:
                 print(f"    [ERROR] could not read: {path}")
