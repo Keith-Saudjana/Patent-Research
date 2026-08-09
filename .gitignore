@@ -1,4 +1,6 @@
-class_folder
+checkpoints
+datasets/
+class_folder/USPC_Locarno_Conversion/
 figure_crops
 impact_dataset
 LLaVA-NeXT
@@ -6,7 +8,11 @@ model_io
 model_weights
 debug
 groundingLMM
+unused
 fonts
+CLIP_*
+DesignCLIP_*
+step_x_*
 *.pth
 *.pt
 *.log
@@ -14,4 +20,5 @@ fonts
 Impact_clean.csv
 data/
 __pycache__/
-.ipynb_checkpoints/
+.ipynb_checkpoints/datasets/cifar-100-python.tar.gz
+datasets/cifar-100-python/
